@@ -63,7 +63,7 @@ public class SyncService extends WakefulIntentService {
     // minimum time between us trying airplane mode shenanigans
     public static final long AIRPLANE_MODE_WAIT = 1000l * 60 * 10;
 
-    public static String ENDPOINT = "https://rapidpro.io";
+    public static String ENDPOINT = "https://rapidpro.ona.io";
 
     public SyncService(){
         super(SyncService.class.getSimpleName());
@@ -374,7 +374,7 @@ public class SyncService extends WakefulIntentService {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
 
         String network = prefs.getString(SettingsActivity.DEFAULT_NETWORK, "none");
-        String gcmId = prefs.getString(SettingsActivity.GCM_ID, "");
+        String gcmId = "887701203629";//prefs.getString(SettingsActivity.GCM_ID, "");
         boolean useAirplane = prefs.getBoolean(SettingsActivity.AIRPLANE_RESET, false);
 
         RapidPro.LOG.d("Use airplane: " + useAirplane);
