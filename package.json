@@ -37,7 +37,7 @@
     "watch": "0.13.0"
   },
   "resolutions": {
-    "minimist": "1.2.5"
+    "minimist": "1.2.6"
   },
   "vaadin": {
     "disableUsageStatistics": true
